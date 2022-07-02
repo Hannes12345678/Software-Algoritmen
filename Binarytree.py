@@ -182,7 +182,7 @@ if __name__ == "__main__":
     pn_liste = pnliste
     userinput = ""
     while userinput != "x":
-            userinput = input("Daten suchen (1), \n" "Daten Anzeige (2), \n" "Daten hinzufügen (3), \n" "Daten löschen (4), \n " "Help (5), " "Beenden: (x)")
+            userinput = input("Daten suchen (1), \n" "Daten Anzeige (2), \n" "Daten hinzufügen (3), \n" "Daten löschen (4), \n" "Help (5),\n""Beenden: (x)")
             print("Datenbank wird geladen...")
 
             if userinput == "1":
