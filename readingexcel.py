@@ -58,7 +58,8 @@ class readplusexcel():
 
         for i in range(2, row + 1):
             for j in range(1, column + 1):
-                print(sh1.cell(i, j).value)
+                return (sh1.cell(i, j).value)
+
 
     def dateiausgabe_column1(file):
         wb = openpyxl.load_workbook(file)
@@ -71,7 +72,9 @@ class readplusexcel():
 
         for i in range(2, row + 1):
             for j in range(1, 2):
-                print(sh1.cell(i, j).value)
+                return (sh1.cell(i, j).value)
+
+
 
     def dateiausgabe_column2(file):
         wb = openpyxl.load_workbook(file)
@@ -84,7 +87,7 @@ class readplusexcel():
 
         for i in range(2, row + 1):
             for j in range(2, 3):
-                print(sh1.cell(i, j).value)
+                return (sh1.cell(i, j).value) #vllt print
 
 
 #readplusexcel.dateiausgabe('1test1.xlsx')
