@@ -1,3 +1,12 @@
+import pandas as pd
+
+produkte = pd.read_csv("test.csv", delimiter=";")
+pn = produkte["PN"] #falls andere csv PN ändern
+lager = produkte["LAGER"]
+lagerliste = lager.values.tolist()
+pnliste = pn.values.tolist()
+
+
 class Knoten:
     def __init__(self, daten, Lager):
         self.links = None
@@ -44,11 +53,22 @@ class Knoten:
 
 
 
-baum = Knoten(10, "")
-baum.insert(3, "befindet sich in Lager 1f")
-baum.insert(5, "befindet sich in Lager 5d")
+baum = Knoten(100, "")
+baum.insert(5, "1f")
+file = "1test1.xlsx"
+pl = len(pnliste)
+
+i = 0
+while i <= pl:
+    baum.insert(pnliste[0 + i], lagerliste[0 + i])
+    i =i +1
+    if i == pl:
+        baum.PrintTree()
+        break
 
 
-baum.PrintTree()
 
-#print(baum.findaten(3))
+
+
+
+
